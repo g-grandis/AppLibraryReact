@@ -1,0 +1,23 @@
+{
+    "idBook" : 3,
+    "Title" : "Book 3",
+    "Author" : "Author 3",
+    "Editor" : "Editor 3",
+    "Genre" : "Genre 3",
+    "Chapters" : [
+        {
+            "ChapterNum" : 1,
+            "Pages" :[
+                {
+                    "PageNum" : 1,
+                    "pathPage" : "../books/book/pages/page03_01.md"
+                },
+                {
+                    "PageNum" : 2,
+                    "pathPage" : "../books/book/pages/page03_02.md"
+                }
+            ]
+        }
+
+    ]
+}

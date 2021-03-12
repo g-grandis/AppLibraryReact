@@ -1,0 +1,44 @@
+ {
+    "books" :[
+                {
+                    "idBook" : 1,
+                    "pathBook" : "./book/Book01.json",
+                    "Title" : "Book 1",
+                    "Author" : "Author 1"
+
+                },
+                {
+                    "idBook" : 2,
+                    "pathBook" : "./book/Book02.json",
+                    "Title" : "Book 2",
+                    "Author" : "Author 2"     
+                },
+                {
+                    "idBook" : 3,
+                    "pathBook" : "./book/Book03.json",
+                    "Title" : "Book 3",
+                    "Author" : "Author 3"
+                },
+                {
+                    "idBook" : 1,
+                    "pathBook" : "./book/Book01.json",
+                    "Title" : "Book 1",
+                    "Author" : "Author 1"
+
+                },
+                {
+                    "idBook" : 2,
+                    "pathBook" : "./book/Book02.json",
+                    "Title" : "Book 2",
+                    "Author" : "Author 2"     
+                },
+                {
+                    "idBook" : 3,
+                    "pathBook" : "./book/Book03.json",
+                    "Title" : "Book 3",
+                    "Author" : "Author 3"
+                }
+                
+
+]
+}

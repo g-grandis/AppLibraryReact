@@ -1,0 +1,37 @@
+{
+                    "idBook" : 1,
+                    "Title" : "Book 1",
+                    "Author" : "Author 1",
+                    "Editor" : "Editor 1",
+                    "Genre" : "Genre 1",
+                    "Chapters" : [
+                        {
+                            "ChapterNum" : 1,
+                            "Pages" :[
+                                {
+                                    "PageNum" : 1,
+                                    "pathPage" : "../books/book/pages/page01_01.md"
+                                },
+                                {
+                                    "PageNum" : 2,
+                                    "pathPage" : "../books/book/pages/page01_02.md"
+                                }
+                            ]
+                        },
+                        {
+                            "ChapterNum" : 2,
+                            "Pages" : [
+                                
+                                {
+                                    "PageNum" : 3,
+                                    "pathPage" : "../books/book/pages/page01_03.md"
+                                },
+                                {
+                                    "PageNum" : 4,
+                                    "pathPage" : "../books/book/pages/page01_04.md"
+                                }
+                            ]
+                        }
+
+                    ]
+}
