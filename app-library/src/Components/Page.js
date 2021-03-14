@@ -13,16 +13,16 @@ const Page = ({props}) => {
     let test = null;
     const [test2,setTest2] = useState(null);
     useEffect(() =>{
-        setPagesPath(props);
+      let mdText = undefined;
+      test = axios.get(`${publicUrl}/books/book/pages/page01_01.md`)
+      .then((result) => {
+        mdText = result.data;
+        setTest2({ mdText });
+        }); 
+        console.log("useEffect");
         
     },[props]);
     //"../books/book/pages/page01_01.md"
-    let mdText = undefined;
-    test = axios.get(`/books/book/pages/page01_01.md`)
-    .then((result) => {
-      mdText = result.data;
-      setTest2({ mdText });
-      }); 
           // fetch(readmePath)
           // .then(response => {
           //   return response.text()
@@ -31,6 +31,7 @@ const Page = ({props}) => {
           //   setPagesPath({text})
           // })
     return (<div>{console.log({test2})}
-    <p><ReackMarkdown source={pagesPath}/></p></div>)
+    {!test2 ? <span>Caricamento</span> : 
+    <p><ReackMarkdown source={test2.mdText}/></p>}</div>)
 }
 export default Page
