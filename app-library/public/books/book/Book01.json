@@ -10,11 +10,11 @@
                             "Pages" :[
                                 {
                                     "PageNum" : 1,
-                                    "pathPage" : "../books/book/pages/page01_01.md"
+                                    "pathPage" : "/books/book/pages/page01_01.md"
                                 },
                                 {
                                     "PageNum" : 2,
-                                    "pathPage" : "../books/book/pages/page01_02.md"
+                                    "pathPage" : "/books/book/pages/page01_02.md"
                                 }
                             ]
                         },
@@ -24,11 +24,11 @@
                                 
                                 {
                                     "PageNum" : 3,
-                                    "pathPage" : "../books/book/pages/page01_03.md"
+                                    "pathPage" : "/books/book/pages/page01_03.md"
                                 },
                                 {
                                     "PageNum" : 4,
-                                    "pathPage" : "../books/book/pages/page01_04.md"
+                                    "pathPage" : "/books/book/pages/page01_04.md"
                                 }
                             ]
                         }

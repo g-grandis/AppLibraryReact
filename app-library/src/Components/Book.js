@@ -1,11 +1,13 @@
 import React from "react"
 import {Route,BrowserRouter as Router} from 'react-router-dom'
 import { useParams } from 'react-router';
-import Book01 from '../books/book/Book01.json'
-import Book02 from '../books/book/Book02.json'
-import Book03 from '../books/book/Book03.json'
+import Book01 from '../../public/books/book/Book01.json'
+import Book02 from '../../public/books/book/Book02.json'
+import Book03 from '../../public/books/book/Book03.json'
 import Chapter from './Chapter'
 import Page from './Page'
+const publicUrl = process.env.PUBLIC_URL;
+
 
 const Book = () => {
     var chapters = null;

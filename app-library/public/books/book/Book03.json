@@ -10,11 +10,11 @@
             "Pages" :[
                 {
                     "PageNum" : 1,
-                    "pathPage" : "../books/book/pages/page03_01.md"
+                    "pathPage" : "/books/book/pages/page03_01.md"
                 },
                 {
                     "PageNum" : 2,
-                    "pathPage" : "../books/book/pages/page03_02.md"
+                    "pathPage" : "/books/book/pages/page03_02.md"
                 }
             ]
         }

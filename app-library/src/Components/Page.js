@@ -1,37 +1,37 @@
-import React, {useEffect, useState} from "react"
-import { render } from 'react-dom';
-import ReactMd from 'react-md-file';
-import marked from "marked";
+import React, { useEffect, useState } from "react"
 import axios from 'axios';
 import ReackMarkdown from "react-markdown"
-import readmePath from '../books/book/pages/page01_01.md'
 
 
 const publicUrl = process.env.PUBLIC_URL;
-const Page = ({props}) => {
-    const [pagesPath, setPagesPath] = useState([]);
-    let test = null;
-    const [test2,setTest2] = useState(null);
-    useEffect(() =>{
-      let mdText = undefined;
-      test = axios.get(`${publicUrl}/books/book/pages/page01_01.md`)
-      .then((result) => {
-        mdText = result.data;
-        setTest2({ mdText });
-        }); 
-        console.log("useEffect");
-        
-    },[props]);
-    //"../books/book/pages/page01_01.md"
-          // fetch(readmePath)
-          // .then(response => {
-          //   return response.text()
-          // })
-          // .then(text => {
-          //   setPagesPath({text})
-          // })
-    return (<div>{console.log({test2})}
-    {!test2 ? <span>Caricamento</span> : 
-    <p><ReackMarkdown source={test2.mdText}/></p>}</div>)
+const Page = ({ values }) => {
+  const [pagesPath, setPagesPath] = useState(null);
+  const [arrayMd, setArrayMd] = useState([]);
+   const getMd = async(path) => {
+        console.log('getMd', path)
+        const result =await axios.get(`${publicUrl}${path}`)       
+            let mdText = result.data
+            return mdText;
+      }
+  useEffect(()=>{setPagesPath(values);},[])
+  useEffect(() => { 
+    if (pagesPath != null) {
+    if (pagesPath.length > 0) { 
+      let arrayTemp;
+      for (var i = 0; i < pagesPath.length; i++) {
+        console.log(pagesPath[i]);
+        arrayTemp.push(getMd(pagesPath[i].pagePath));
+        console.log('For')
+      }
+      setArrayMd(arrayTemp);
+    }
+  }
+  }, [pagesPath]);
+  console.log(arrayMd)
+  
+  
+  return (<div>{console.log({arrayMd})}
+    {arrayMd.map((item) => (<ReackMarkdown>{item}</ReackMarkdown>))}</div>)
 }
+//arrayMd.map(item => {})
 export default Page

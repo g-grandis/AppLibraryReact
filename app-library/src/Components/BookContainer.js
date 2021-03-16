@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import { Route, BrowserRouter as Router,Link } from 'react-router-dom'
 import Book from './Book'
-import BooksJson from "../books/BooksJson.json"
+import BooksJson from "../../public/books/BooksJson.json"
 import Card from "react-bootstrap/Card"
 import CardGroup from "react-bootstrap/CardGroup"
 import Button from "react-bootstrap/Button"

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from 'react-router';
-import Book01 from '../books/book/Book01.json'
-import Book02 from '../books/book/Book02.json'
-import Book03 from '../books/book/Book03.json'
+import Book01 from '../../public/books/book/Book01.json'
+import Book02 from '../../public/books/book/Book02.json'
+import Book03 from '../../public/books/book/Book03.json'
 import Page from './Page'
 const Chapter = () => {
     const { book } = useParams();
@@ -99,8 +99,8 @@ const Chapter = () => {
         <br />
         <p>Book: {book}</p>
         <p>Chapter: {chapter}</p>
-        <p>{console.log({ urls })}</p>
-        <p><Page props={urls}/></p>
+        <p>{console.log(typeof(urls))}</p>
+        <p><Page values={urls}/></p>
     </div>)
 }
 
