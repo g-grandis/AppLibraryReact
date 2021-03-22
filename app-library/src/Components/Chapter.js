@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { Route, BrowserRouter as Router,Link } from 'react-router-dom'
 import { useParams } from 'react-router';
 import Book01 from '../../public/books/book/Book01.json'
 import Book02 from '../../public/books/book/Book02.json'
@@ -95,13 +96,16 @@ const Chapter = () => {
         }
     }, [])
     console.log({urls})
-        return (<div>
+    let path = '/books/book/'+book+'/chapter/'+chapter+'/pages'
+        return (
+        <Router>
+        <div>
         <br />
         <p>Book: {book}</p>
         <p>Chapter: {chapter}</p>
         <p>{console.log(typeof(urls))}</p>
-        <p><Page values={urls}/></p>
-    </div>)
+        <Route path={path}><p><Page values={urls}/></p></Route>
+    </div></Router>)
 }
 
 export default Chapter
